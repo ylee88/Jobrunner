@@ -149,7 +149,7 @@ def CreateSubmitFile(config):
     with open(config.job.workdir + os.sep + "job.submit", "w") as submitfile:
 
         # write the header
-        submitfile.write("#!/bin/bash\n")
+        submitfile.write("#!/bin/bash -l\n")
 
         # add commands from schedular.options
         submitfile.write(f"\n")
